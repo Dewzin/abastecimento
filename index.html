@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Abastecimento</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: #0f172a;
+            color: white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .container {
+            background: #1e293b;
+            padding: 25px;
+            border-radius: 12px;
+            width: 320px;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.5);
+        }
+
+        h1 {
+            text-align: center;
+            margin-bottom: 10px;
+        }
+
+        label {
+            display: block;
+            margin-top: 15px;
+        }
+
+        select, input {
+            width: 100%;
+            padding: 10px;
+            margin-top: 5px;
+            border-radius: 8px;
+            border: none;
+            outline: none;
+        }
+
+        select {
+            background: #334155;
+            color: white;
+        }
+
+        input {
+            background: #334155;
+            color: white;
+        }
+
+        #resultado {
+            margin-top: 20px;
+            font-size: 1.5em;
+            text-align: center;
+            font-weight: bold;
+            color: #22c55e;
+        }
+
+        ul {
+            padding-left: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h1>Abastecimento</h1>
+
+        <p>Escolha o combustível:</p>
+        <ul>
+            <li>Gasolina: R$ 6,69</li>
+            <li>Etanol: R$ 5,80</li>
+            <li>Diesel: R$ 6,20</li>
+        </ul>
+
+        <form id="formCombustivel">
+            <label>Tipo de Combustível</label>
+            <select id="combustivel">
+                <option value="">Selecione</option>
+                <option value="gasolina">Gasolina</option>
+                <option value="etanol">Etanol</option>
+                <option value="diesel">Diesel</option>
+            </select>
+
+            <label>Quantidade (litros)</label>
+            <input type="number" id="litros" step="0.1" min="0">
+        </form>
+
+        <h2>Resultado</h2>
+        <p id="resultado">R$ 0,00</p>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
